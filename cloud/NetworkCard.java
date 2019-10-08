@@ -19,15 +19,20 @@ public class NetworkCard {
 	NetworkCard(int unitNumber){
 		this.unitNumber = unitNumber;
 		// Escribe tu código {
+			StringBuilder sb = new StringBuilder();
+			this.label = sb.append("Network Card ").append(unitNumber).toString();
 
 		// }
 		this.macAddress = CloudUtil.getMACAddress();
 	}
 	
-	NetworkCard(String network, int unitNumber){
+	NetworkCard(String network, int unitNumber,){
 		this.network = network;
 		this.unitNumber = unitNumber;
 		// Escribe tu código {
+			StringBuilder sb = new StringBuilder();
+			this.label = sb.append("Network Card ").append(unitNumber).toString();
+
 
 		// }
 		this.macAddress = CloudUtil.getMACAddress();
@@ -37,6 +42,9 @@ public class NetworkCard {
 		this.unitNumber = unitNumber;
 		this.speedMb = speedMb;
 		// Escribe tu código {
+			StringBuilder sb = new StringBuilder();
+			this.label = sb.append("Network Card ").append(unitNumber).toString();
+
 
 		// }
 		this.macAddress = CloudUtil.getMACAddress();
@@ -53,6 +61,12 @@ public class NetworkCard {
 	public String toString(){
 		StringBuilder sb = new StringBuilder();
 		// Escribe tu código {
+			sb.append("Etiqueta : ").append(this.label).append("\n");
+			sb.append("Unidad   :  ").append(this.unitNumber).append("\n");
+			sb.append("MAC      : ").append(this.macAddress).append("\n");
+			sb.append("Network  : 122.22.22.22").append(this.network).append("\n");
+			sb.append("Velocidad: ").append(this.speedMb).append("\n");
+
 
 		// }
 		return sb.toString();
